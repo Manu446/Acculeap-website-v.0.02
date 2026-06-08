@@ -7,6 +7,8 @@ import { Preloader } from '@/components/sections/Preloader'
 import { BackToTop } from '@/components/sections/BackToTop'
 import './globals.css'
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
+
 export const metadata: Metadata = {
   title: 'Acculeap Analytics — Financial Intelligence, Made Modern',
   description: "Advanced IFRS advisory, risk analytics, and business intelligence for East Africa's financial institutions.",
@@ -18,8 +20,8 @@ export const metadata: Metadata = {
     type: 'website',
   },
   icons: {
-    icon: '/favicon.png',
-    apple: '/favicon.png',
+    icon: `${basePath}/favicon.png`,
+    apple: `${basePath}/favicon.png`,
   },
 }
 

@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
+import { assetPath } from '@/lib/assetPath'
 
 const sizes = {
   sm: { width: 120, height: 36, className: 'h-8 w-auto' },
@@ -21,7 +22,7 @@ export function Logo({ size = 'md', className, linked = true }: LogoProps) {
 
   const image = (
     <Image
-      src="/logo.png"
+      src={assetPath('/logo.png')}
       alt="Acculeap Analytics"
       width={width}
       height={height}
