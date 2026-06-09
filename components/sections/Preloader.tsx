@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Logo } from '@/components/Logo'
+import { isHomeRoute, normalizeRoute } from '@/lib/routePath'
 
 const preloaderMessages: Record<string, { title: string; subtitle: string; status: string }> = {
   '/': {
@@ -41,9 +42,22 @@ const fallbackMessage = {
 
 export function Preloader() {
   const pathname = usePathname()
-  const message = preloaderMessages[pathname] ?? fallbackMessage
+  const route = normalizeRoute(pathname)
+  const message = preloaderMessages[route] ?? fallbackMessage
   const [loading, setLoading] = useState(true)
   const [progress, setProgress] = useState(0)
+
+  useEffect(() => {
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual'
+    }
+  }, [])
+
+  useEffect(() => {
+    if (!loading && isHomeRoute(route)) {
+      window.scrollTo(0, 0)
+    }
+  }, [loading, route])
 
   useEffect(() => {
     const interval = setInterval(() => {

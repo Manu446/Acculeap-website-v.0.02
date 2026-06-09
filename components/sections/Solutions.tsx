@@ -43,7 +43,7 @@ const solutions = [
 
 export function Solutions() {
   return (
-    <section id="solutions" className="section-padding">
+    <section id="home-solutions" className="section-padding">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="max-w-xl mb-16">
           <span className="text-maroon font-bold text-sm uppercase tracking-[0.15em] mb-4 block relative pl-5">

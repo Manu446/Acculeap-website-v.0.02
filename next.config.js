@@ -5,7 +5,7 @@ const repoBasePath = '/Acculeap-website-v.0.02'
 const nextConfig = {
   // Static export only for production builds — never during `next dev`
   ...(process.env.NODE_ENV === 'production' ? { output: 'export' } : {}),
-  ...(isGithubPages ? { basePath: repoBasePath, assetPrefix: repoBasePath } : {}),
+  ...(isGithubPages ? { basePath: repoBasePath, assetPrefix: repoBasePath, trailingSlash: true } : {}),
   env: {
     NEXT_PUBLIC_BASE_PATH: isGithubPages ? repoBasePath : '',
   },

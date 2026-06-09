@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Sun, Moon, Menu, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { Logo } from '@/components/Logo'
+import { normalizeRoute } from '@/lib/routePath'
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -22,7 +23,7 @@ export function Header() {
   const [scrollProgress, setScrollProgress] = useState(0)
   const [mobileOpen, setMobileOpen] = useState(false)
   const { theme, toggleTheme } = useTheme()
-  const pathname = usePathname()
+  const pathname = normalizeRoute(usePathname())
 
   useEffect(() => {
     const handleScroll = () => {

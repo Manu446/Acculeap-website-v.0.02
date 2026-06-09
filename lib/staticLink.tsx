@@ -9,8 +9,11 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
 function toStaticHref(href: string): string {
   const [path, ...hashParts] = href.split('#')
   const hash = hashParts.length ? `#${hashParts.join('#')}` : ''
-  const url = path === '/' ? `${basePath}/` : assetPath(path)
-  return `${url}${hash}`
+  if (path === '/') {
+    return `${basePath}/${hash}`.replace('/#', '#')
+  }
+  const normalized = assetPath(path).replace(/\/?$/, '/')
+  return `${normalized}${hash}`
 }
 
 type StaticLinkProps = ComponentProps<typeof Link>
