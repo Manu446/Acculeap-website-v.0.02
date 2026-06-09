@@ -1,7 +1,7 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import { cn } from '@/lib/utils'
 import { assetPath } from '@/lib/assetPath'
+import { StaticLink } from '@/lib/staticLink'
 
 const sizes = {
   sm: { width: 120, height: 36, className: 'h-8 w-auto' },
@@ -36,8 +36,8 @@ export function Logo({ size = 'md', className, linked = true }: LogoProps) {
   }
 
   return (
-    <Link href="/" className="inline-flex items-center transition-opacity duration-300 hover:opacity-90">
+    <StaticLink href="/" className="inline-flex items-center transition-opacity duration-300 hover:opacity-90">
       {image}
-    </Link>
+    </StaticLink>
   )
 }

@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import Link from 'next/link'
+import { StaticLink } from '@/lib/staticLink'
 import { AnimatedSection } from '@/components/animations/AnimatedSection'
 import { ArrowRight, Clock, Shield, Users } from 'lucide-react'
 
@@ -57,19 +57,19 @@ export function CTA() {
                 viewport={{ once: true }}
                 className="flex flex-wrap justify-center gap-4 mb-10"
               >
-                <Link
+                <StaticLink
                   href="/contact"
                   className="inline-flex items-center gap-2.5 h-14 px-8 rounded-lg bg-white text-maroon font-sora font-bold shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl btn-shine"
                 >
                   Schedule Your Call
                   <ArrowRight className="w-4 h-4" />
-                </Link>
-                <Link
+                </StaticLink>
+                <StaticLink
                   href="/solutions"
                   className="inline-flex items-center gap-2.5 h-14 px-8 rounded-lg bg-white/10 border border-white/25 text-white font-sora font-bold backdrop-blur-sm transition-all duration-300 hover:bg-white/20 hover:-translate-y-1"
                 >
                   View Solutions
-                </Link>
+                </StaticLink>
               </motion.div>
 
               <motion.div

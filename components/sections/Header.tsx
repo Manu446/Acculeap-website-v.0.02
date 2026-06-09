@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import Link from 'next/link'
+import { StaticLink } from '@/lib/staticLink'
 import { usePathname } from 'next/navigation'
 import { useTheme } from '@/hooks/useTheme'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -64,7 +64,7 @@ export function Header() {
             {/* Desktop Nav */}
             <nav className="hidden md:flex items-center gap-1">
               {navLinks.map((link) => (
-                <Link
+                <StaticLink
                   key={link.href}
                   href={link.href}
                   className={cn(
@@ -82,7 +82,7 @@ export function Header() {
                       transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                     />
                   )}
-                </Link>
+                </StaticLink>
               ))}
             </nav>
 
@@ -118,12 +118,12 @@ export function Header() {
                 </AnimatePresence>
               </button>
 
-              <Link
+              <StaticLink
                 href="/contact"
                 className="hidden sm:inline-flex h-10 px-5 items-center justify-center rounded-lg bg-gradient-to-br from-maroon to-maroon-light text-white text-sm font-sora font-bold shadow-lg shadow-maroon/25 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-maroon/30"
               >
                 Get Started
-              </Link>
+              </StaticLink>
 
               <button
                 onClick={() => setMobileOpen(!mobileOpen)}
@@ -155,7 +155,7 @@ export function Header() {
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: i * 0.1 }}
                 >
-                  <Link
+                  <StaticLink
                     href={link.href}
                     className={cn(
                       'flex items-center justify-between py-4 text-2xl font-sora font-bold border-b border-border transition-colors',
@@ -168,7 +168,7 @@ export function Header() {
                     <span className="text-maroon opacity-0 transition-all -translate-x-3 group-hover:opacity-100 group-hover:translate-x-0">
                       →
                     </span>
-                  </Link>
+                  </StaticLink>
                 </motion.div>
               ))}
             </div>

@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import Link from 'next/link'
+import { StaticLink } from '@/lib/staticLink'
 import { AnimatedSection, AnimatedStagger, AnimatedItem } from '@/components/animations/AnimatedSection'
 import { ClipboardList, Shield, BarChart3, ArrowRight } from 'lucide-react'
 
@@ -98,13 +98,13 @@ export function Solutions() {
                       </li>
                     ))}
                   </ul>
-                  <Link
+                  <StaticLink
                     href={solution.href}
                     className="inline-flex items-center gap-2 text-maroon font-bold text-sm transition-all duration-300 group-hover:gap-3.5"
                   >
                     Learn more
                     <ArrowRight className="w-4 h-4" />
-                  </Link>
+                  </StaticLink>
                 </div>
               </div>
             </AnimatedItem>

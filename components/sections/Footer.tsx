@@ -1,6 +1,6 @@
 'use client'
 
-import Link from 'next/link'
+import { StaticLink } from '@/lib/staticLink'
 import { Linkedin, Twitter, Mail } from 'lucide-react'
 import { Logo } from '@/components/Logo'
 import { AnimatedSection, AnimatedStagger, AnimatedItem } from '@/components/animations/AnimatedSection'
@@ -53,7 +53,7 @@ export function Footer() {
             </h4>
             <div className="flex flex-col gap-2">
               {solutions.map((link) => (
-                <Link
+                <StaticLink
                   key={link.href + link.label}
                   href={link.href}
                   className="text-muted-foreground text-sm py-2 transition-all duration-300 hover:text-maroon hover:pl-2 relative group"
@@ -62,7 +62,7 @@ export function Footer() {
                     →
                   </span>
                   {link.label}
-                </Link>
+                </StaticLink>
               ))}
             </div>
           </AnimatedItem>
@@ -74,7 +74,7 @@ export function Footer() {
             </h4>
             <div className="flex flex-col gap-2">
               {company.map((link) => (
-                <Link
+                <StaticLink
                   key={link.href + link.label}
                   href={link.href}
                   className="text-muted-foreground text-sm py-2 transition-all duration-300 hover:text-maroon hover:pl-2 relative group"
@@ -83,7 +83,7 @@ export function Footer() {
                     →
                   </span>
                   {link.label}
-                </Link>
+                </StaticLink>
               ))}
             </div>
           </AnimatedItem>
