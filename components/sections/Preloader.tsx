@@ -1,10 +1,47 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Logo } from '@/components/Logo'
 
+const preloaderMessages: Record<string, { title: string; subtitle: string; status: string }> = {
+  '/': {
+    title: 'Welcome to Acculeap',
+    subtitle: "Financial intelligence for East Africa's leading institutions.",
+    status: 'Preparing your experience',
+  },
+  '/solutions': {
+    title: 'Our Solutions',
+    subtitle: 'IFRS advisory, risk management, and business intelligence.',
+    status: 'Loading solutions',
+  },
+  '/about': {
+    title: 'About Acculeap',
+    subtitle: 'Actuaries, accountants, and data engineers for East Africa.',
+    status: 'Loading our story',
+  },
+  '/insights': {
+    title: 'Insights',
+    subtitle: 'Guidance on IFRS, risk, and analytics across the region.',
+    status: 'Loading insights',
+  },
+  '/contact': {
+    title: 'Get in Touch',
+    subtitle: "Let's start with a conversation about your finance function.",
+    status: 'Loading contact',
+  },
+}
+
+const fallbackMessage = {
+  title: 'Acculeap Analytics',
+  subtitle: 'Financial intelligence, made modern.',
+  status: 'Loading page',
+}
+
 export function Preloader() {
+  const pathname = usePathname()
+  const message = preloaderMessages[pathname] ?? fallbackMessage
   const [loading, setLoading] = useState(true)
   const [progress, setProgress] = useState(0)
 
@@ -55,30 +92,33 @@ export function Preloader() {
             </motion.div>
 
             <motion.h1
+              key={message.title}
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.8 }}
               className="font-sora font-extrabold text-2xl sm:text-3xl text-white mb-3"
             >
-              Welcome to Acculeap
+              {message.title}
             </motion.h1>
 
             <motion.p
+              key={message.subtitle}
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1, duration: 0.8 }}
               className="font-sora text-sm sm:text-base text-white/60 max-w-sm mx-auto leading-relaxed mb-8"
             >
-              Financial intelligence for East Africa&apos;s leading institutions.
+              {message.subtitle}
             </motion.p>
 
             <motion.div
+              key={message.status}
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.2, duration: 0.8 }}
               className="font-sora font-medium text-xs text-white/40 uppercase tracking-[0.4em] mb-8"
             >
-              Preparing your experience
+              {message.status}
             </motion.div>
 
             <motion.div
