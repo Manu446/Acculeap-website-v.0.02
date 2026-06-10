@@ -192,11 +192,8 @@ export function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2"
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10"
       >
-        <span className="text-[0.65rem] text-white/40 uppercase tracking-[0.2em]">
-          Scroll
-        </span>
         <div className="w-px h-10 bg-gradient-to-b from-white/50 to-transparent relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent via-white/80 to-transparent animate-scroll-line" />
         </div>

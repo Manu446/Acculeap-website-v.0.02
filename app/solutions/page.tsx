@@ -82,7 +82,7 @@ export default function SolutionsPage() {
         badge="Services"
         title="Our Solutions"
         subtitle="Comprehensive financial advisory and technology services designed for regulated institutions in East Africa."
-        image="https://images.unsplash.com/photo-1504384308090-c54be3852f33?w=1920&q=80"
+        image="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1920&q=80"
       />
 
       {/* Services */}

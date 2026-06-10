@@ -64,12 +64,6 @@ export function CTA() {
                   Schedule Your Call
                   <ArrowRight className="w-4 h-4" />
                 </StaticLink>
-                <StaticLink
-                  href="/solutions"
-                  className="inline-flex items-center gap-2.5 h-14 px-8 rounded-lg bg-white/10 border border-white/25 text-white font-sora font-bold backdrop-blur-sm transition-all duration-300 hover:bg-white/20 hover:-translate-y-1"
-                >
-                  View Solutions
-                </StaticLink>
               </motion.div>
 
               <motion.div
