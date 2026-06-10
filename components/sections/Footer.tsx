@@ -1,7 +1,7 @@
 'use client'
 
 import { StaticLink } from '@/lib/staticLink'
-import { Linkedin, Twitter, Mail } from 'lucide-react'
+import { Linkedin, Mail } from 'lucide-react'
 import { Logo } from '@/components/Logo'
 import { AnimatedSection, AnimatedStagger, AnimatedItem } from '@/components/animations/AnimatedSection'
 
@@ -19,6 +19,25 @@ const company = [
   { href: '/contact', label: 'Contact' },
 ]
 
+function XIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+      className={className}
+    >
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+    </svg>
+  )
+}
+
+const socialLinks = [
+  { Icon: Linkedin, label: 'LinkedIn' },
+  { Icon: XIcon, label: 'X' },
+  { Icon: Mail, label: 'Email' },
+]
+
 export function Footer() {
   return (
     <footer className="border-t border-border relative overflow-hidden">
@@ -33,12 +52,12 @@ export function Footer() {
               Advanced IFRS advisory, risk analytics, and business intelligence for East Africa&apos;s financial institutions.
             </p>
             <div className="flex gap-3 mt-7">
-              {[Linkedin, Twitter, Mail].map((Icon, i) => (
+              {socialLinks.map(({ Icon, label }) => (
                 <a
-                  key={i}
+                  key={label}
                   href="#"
                   className="w-11 h-11 rounded-xl border border-border bg-card flex items-center justify-center text-muted-foreground transition-all duration-300 hover:bg-maroon hover:text-white hover:border-maroon hover:-translate-y-1 hover:scale-105 hover:shadow-lg hover:shadow-maroon/20"
-                  aria-label="Social link"
+                  aria-label={label}
                 >
                   <Icon className="w-4 h-4" />
                 </a>
@@ -96,6 +115,9 @@ export function Footer() {
             <div className="flex flex-col gap-2">
               <a href="tel:+254747145779" className="text-muted-foreground text-sm py-2 transition-colors hover:text-maroon">
                 +254 747 145 779
+              </a>
+              <a href="tel:+250788442579" className="text-muted-foreground text-sm py-2 transition-colors hover:text-maroon">
+                +250 788 442 579 <span className="text-muted-foreground/70">(Rwanda)</span>
               </a>
               <a href="mailto:info@acculeap-analytics.com" className="text-muted-foreground text-sm py-2 transition-colors hover:text-maroon">
                 info@acculeap-analytics.com

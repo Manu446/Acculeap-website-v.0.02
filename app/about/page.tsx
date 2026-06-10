@@ -26,10 +26,10 @@ const team = [
 ]
 
 const locations = [
-  { city: 'Nairobi', country: '🇰🇪', address: 'Westlands Business Park\nBlock C, 4th Floor', phone: '+254 747 145 779', image: 'https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?w=400&q=80' },
+  { city: 'Nairobi', country: '🇰🇪', address: 'AACC Building\n4th Floor, Waiyaki Way. Nairobi, Kenya', phone: '+254 747 145 779', image: 'https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?w=400&q=80' },
   { city: 'Kampala', country: '🇺🇬', address: 'Kololo Heights\nPlot 14, Hannington Road', phone: '+256 772 000 000', image: 'https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=600&q=80' },
   { city: 'Dar es Salaam', country: '🇹🇿', address: 'Masaki Commercial Centre\nHaile Selassie Road', phone: '+255 744 000 000', image: 'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=400&q=80' },
-  { city: 'Kigali', country: '🇷🇼', address: 'Kigali Heights\nKN 5 Road, Remera', phone: '+250 788 000 000', image: 'https://images.unsplash.com/photo-1519659528534-7fd733a832a0?w=400&q=80' },
+  { city: 'Kigali', country: '🇷🇼', address: 'Kigali Heights\nKN 5 Road, Remera', phone: '+250 788 442 579', image: 'https://images.unsplash.com/photo-1519659528534-7fd733a832a0?w=400&q=80' },
 ]
 
 export default function AboutPage() {

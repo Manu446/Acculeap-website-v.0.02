@@ -15,6 +15,13 @@ const contactMethods = [
     subtext: 'Mon–Fri, 8am–6pm EAT',
   },
   {
+    icon: Phone,
+    title: 'Rwanda',
+    content: '+250 788 442 579',
+    href: 'tel:+250788442579',
+    subtext: 'Kigali office',
+  },
+  {
     icon: Mail,
     title: 'Email',
     content: 'info@acculeap-analytics.com',
@@ -24,17 +31,17 @@ const contactMethods = [
   {
     icon: MapPin,
     title: 'Headquarters',
-    content: 'Westlands Business Park, Nairobi',
+    content: 'AACC Building, 4th Floor, Waiyaki Way, Nairobi',
     href: '#',
     subtext: 'Regional offices in Kampala, Dar, & Kigali',
   },
 ]
 
 const locations = [
-  { city: 'Nairobi', flag: '🇰🇪', address: 'Westlands Business Park', detail: 'Block C, 4th Floor', phone: '+254 747 145 779', image: 'https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?w=400&q=80' },
+  { city: 'Nairobi', flag: '🇰🇪', address: 'AACC Building', detail: '4th Floor, Waiyaki Way. Nairobi, Kenya', phone: '+254 747 145 779', image: 'https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?w=400&q=80' },
   { city: 'Kampala', flag: '🇺🇬', address: 'Kololo Heights', detail: 'Plot 14, Hannington Road', phone: '+256 772 000 000', image: 'https://images.unsplash.com/photo-1598890777032-bde83547d93c?w=400&q=80' },
   { city: 'Dar es Salaam', flag: '🇹🇿', address: 'Masaki Commercial Centre', detail: 'Haile Selassie Road', phone: '+255 744 000 000', image: 'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=400&q=80' },
-  { city: 'Kigali', flag: '🇷🇼', address: 'Kigali Heights', detail: 'KN 5 Road, Remera', phone: '+250 788 000 000', image: 'https://images.unsplash.com/photo-1519659528534-7fd733a832a0?w=400&q=80' },
+  { city: 'Kigali', flag: '🇷🇼', address: 'Kigali Heights', detail: 'KN 5 Road, Remera', phone: '+250 788 442 579', image: 'https://images.unsplash.com/photo-1519659528534-7fd733a832a0?w=400&q=80' },
 ]
 
 const faqs = [
