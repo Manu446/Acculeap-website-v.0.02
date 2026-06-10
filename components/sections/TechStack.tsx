@@ -10,8 +10,8 @@ const countries = [
   { name: 'Ethiopia', code: 'et', regulator: 'NBE' },
   { name: 'Tanzania', code: 'tz', regulator: 'BOT' },
   { name: 'Rwanda', code: 'rw', regulator: 'BNR' },
-  { name: 'Burundi', code: 'bi', regulator: 'BRB' },
-  { name: 'South Sudan', code: 'ss', regulator: 'BOSS' },
+  { name: 'Botswana', code: 'bw', regulator: 'BoB' },
+  { name: 'Zambia', code: 'zm', regulator: 'BoZ' },
 ]
 
 const technologies = [
@@ -92,7 +92,7 @@ export function TechStack() {
             Built on Proven Standards
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            Regulator-aligned across seven East African markets, powered by modern analytics technology.
+            Regulator-aligned across key African markets, powered by modern analytics technology.
           </p>
         </AnimatedSection>
       </div>
